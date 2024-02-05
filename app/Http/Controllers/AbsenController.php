@@ -9,7 +9,7 @@ class AbsenController extends Controller
     public function index()
     {
         $title = 'Data Absen';
-        $data = Absen::all();
+        $data = Absen::with('murid')->get();
         
         return view('page.absen', compact('title', 'data'));
     }

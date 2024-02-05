@@ -13,7 +13,6 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>UID</th>
                     <th>Nama</th>
                     <th>Nomor HP</th>
                 </tr>
@@ -22,7 +21,6 @@
                 @foreach ($data as $index => $d)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ $d->uid }}</td>
                     <td>{{ $d->name }}</td>
                     <td>{{ $d->ophone }}</td>
                 </tr>

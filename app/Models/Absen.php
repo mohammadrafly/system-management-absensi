@@ -16,4 +16,9 @@ class Absen extends Model
         'statusMsg',
         'checkType',
     ];
+
+    public function murid()
+    {
+        return $this->belongsTo(Murid::class, 'uid', 'uid');
+    }
 }

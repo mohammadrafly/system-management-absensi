@@ -13,16 +13,17 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>UID</th>
+                    <th>Nama Murid</th>
                     <th>Type Absen</th>
                     <th>Status Pesan</th>
+                    <th>Waktu Absen</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($data as $index => $d)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ $d->uid }}</td>
+                    <td>{{ $d->murid->name }}</td>
                     <td>
                         @if ($d->checkType === 'I')
                             Masuk
@@ -37,6 +38,7 @@
                             Sudah Terkirim
                         @endif
                     </td>
+                    <td>{{ $d->created_at }}</td>
                 </tr>
                 @endforeach
             </tbody>
