@@ -23,7 +23,7 @@
                 @foreach ($data as $index => $d)
                 <tr>
                     <td>{{ $index + 1 }}</td>
-                    <td>{{ $d->murid->name }}</td>
+                    <td>{{ $d->murid->name ?? '' }}</td>
                     <td>
                         @if ($d->checkType === 'I')
                             Masuk
